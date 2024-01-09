@@ -10,7 +10,7 @@
 static int insert_el(info_t *info, char *key, char *value, int hashed_key)
 {
     for (; info->next; info = info->next);
-    info->next = malloc(sizeof(hashtable_t));
+    info->next = malloc(sizeof(info_t));
     if (!info->next)
         return 84;
     info->next->key = my_strdup(key);
