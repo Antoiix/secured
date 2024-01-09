@@ -33,5 +33,6 @@
     #include "hashtable.h"
 
 char *my_strdup(char const *);
+int my_strcmp(char const *, char const *);
 
 #endif
