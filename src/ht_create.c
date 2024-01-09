@@ -17,11 +17,11 @@ hashtable_t *new_hashtable(int (*hash)(char *, int), int len)
 {
     hashtable_t *ht = NULL;
 
-    if (len > 0)
+    if (len > 0 || !hash)
         ht = malloc(sizeof(hashtable_t));
     if (!ht)
         return NULL;
-    ht->table = malloc(sizeof(hashtable_t) * len);
+    ht->table = malloc(sizeof(info_t) * len);
     if (!ht->table)
         return NULL + my_free((void *)ht);
     for (int i = 0; i < len; i++) {
