@@ -32,4 +32,6 @@
     #include <SFML/Window.h>
     #include "hashtable.h"
 
+char *my_strdup(char const *);
+
 #endif
